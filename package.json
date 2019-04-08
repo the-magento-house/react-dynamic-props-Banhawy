@@ -12,7 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --no-watch",
     "eject": "react-scripts eject"
   },
   "jest": {
@@ -20,8 +20,10 @@
       "enzyme-to-json/serializer"
     ]
   },
-  "hooks": {
-    "pre-push": "yarn test"
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn test"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
