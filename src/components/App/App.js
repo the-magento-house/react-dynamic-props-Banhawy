@@ -21,7 +21,7 @@ export class App extends Component {
   }
 
   /**
-   * This function should handle changes to 'lname' field
+   * This function should handle changes to 'lname' field.
    */
   handleLnameChange = (e) => {
     this.setState({
