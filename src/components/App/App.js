@@ -1,0 +1,72 @@
+import React, { Component } from 'react'
+import logo from './brm-logo.svg'
+import './app.scss'
+
+import Child from '../child/Child'
+
+export class App extends Component {
+  state = {
+    fname: "",
+    lname: ""
+  }
+
+  /**
+   * This function should handle changes to 'fname' field
+   */
+  handleFnameChange = () => {
+  }
+
+  /**
+   * This function should handle changes to 'lname' field
+   */
+  handleLnameChange = () => {
+  }
+
+  /**
+   * This function should somehow set the full name of the person and 
+   * the Child component should recieve that full name as props
+   */
+  handleSubmit = () => {
+  }
+
+  render() {
+    return (
+      <div>
+        <header>
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>BRM REACT CHALLENGES</h1>
+        </header>
+
+        <div className="container">
+          <div className="form">
+            <h2>The Challenge</h2>
+            <p>After you enter a name and click submit, it should appear on the right side.</p>
+            <form onSubmit={(e) => e.preventDefault()}>
+              <label>
+                First Name:
+                <input type="text" id="fname" value={this.state.fname} onChange={this.handleFnameChange} />
+              </label>
+              <br />
+              <label>
+                Last Name:
+                <input type="text" id="lname" value={this.state.lname} onChange={this.handleLnameChange} />
+              </label>
+              <br />
+              <input 
+                id="submit" 
+                type="submit" 
+                value="Submit"
+                onClick={this.handleSubmit} />
+            </form>
+          </div>
+          {/* The fullname props passed to Child needs to be dynamic */}
+          <Child fullname="Static Fullname"/>
+
+        </div>
+
+      </div>
+    )
+  }
+}
+
+export default App
