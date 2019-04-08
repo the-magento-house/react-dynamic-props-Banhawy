@@ -7,19 +7,26 @@ import Child from '../child/Child'
 export class App extends Component {
   state = {
     fname: "",
-    lname: ""
+    lname: "",
+    fullname: null
   }
 
   /**
    * This function should handle changes to 'fname' field
    */
-  handleFnameChange = () => {
+  handleFnameChange = (e) => {
+    this.setState({
+      fname: e.target.value
+    })
   }
 
   /**
    * This function should handle changes to 'lname' field
    */
-  handleLnameChange = () => {
+  handleLnameChange = (e) => {
+    this.setState({
+      lname: e.target.value
+    })
   }
 
   /**
@@ -27,6 +34,9 @@ export class App extends Component {
    * the Child component should recieve that full name as props
    */
   handleSubmit = () => {
+    this.setState({
+      fullname: this.state.fname + " " + this.state.lname
+    })
   }
 
   render() {
@@ -60,7 +70,7 @@ export class App extends Component {
             </form>
           </div>
           {/* The fullname props passed to Child needs to be dynamic */}
-          <Child fullname="Static Fullname"/>
+          <Child fullname={this.state.fullname}/>
 
         </div>
 
