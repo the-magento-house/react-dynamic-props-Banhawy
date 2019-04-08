@@ -1,5 +1,5 @@
-# React Challenge #2
-## Manipulating Component CSS
+# React Challenge #3
+## Passing Props
 
 In this challenge you will learn how to dynamically pass and use props from parent component to a child component.
 
