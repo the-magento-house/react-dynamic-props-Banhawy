@@ -1,7 +1,7 @@
 # React Challenge #2
 ## Manipulating Component CSS
 
-In this challenge you will learn how to dynamically change the styles of a page.
+In this challenge you will learn how to dynamically pass and use props from parent component to a child component.
 
 ## The Challenge
 There is a form on the left side of page with first name and last name input fields.
